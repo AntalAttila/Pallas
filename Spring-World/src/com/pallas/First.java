@@ -12,6 +12,6 @@ public void setName(String name) {
 }  
   
 public void displayInfo(){  
-    System.out.println("Helloooooo : "+name);  
+    System.out.println("Hello : "+name);  
 }  
 }  
