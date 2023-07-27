@@ -9,5 +9,9 @@
 <bean id="firstbean" class="com.pallas.First">  
 <property name="name" value="Micimackó"></property>  
 </bean>  
+
+<bean id="secondbean" class="com.pallas.Second">  
+<property name="name" value="Malacka"></property>  
+</bean>  
   
 </beans> 

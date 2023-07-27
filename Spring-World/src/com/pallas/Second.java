@@ -2,7 +2,7 @@ package com.pallas;
 
 import java.io.*;
 
-public class First {  
+public class Second {  
 private String name;  
   
 public String getName() {  
@@ -14,6 +14,6 @@ public void setName(String name) {
 }  
   
 public void displayInfo(){  
-    System.out.println("Helloooo : "+name);  
+    System.out.println("Kiírás a Second modul alapján: "+name);  
 }  
 }  
