@@ -1,7 +1,5 @@
 package com.pallas;
 
-import java.io.*;
-
 public class First {  
 private String name;  
   
@@ -14,6 +12,6 @@ public void setName(String name) {
 }  
   
 public void displayInfo(){  
-    System.out.println("Helloooo : "+name);  
+    System.out.println("Hello : "+name);  
 }  
 }  
