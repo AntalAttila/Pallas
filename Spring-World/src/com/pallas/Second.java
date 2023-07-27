@@ -1,19 +1,17 @@
 package com.pallas;
 
-import java.io.*;
-
 public class Second {  
-private String name;  
+private Byte value;  
   
-public String getName() {  
-    return name;  
+public Byte getValue() {  
+    return value;  
 }  
   
-public void setName(String name) {  
-    this.name = name;  
+public void setValue(Byte value) {  
+    this.value = value;  
 }  
-  
+
 public void displayInfo(){  
-    System.out.println("Kiírás a Second modul alapján: "+name);  
+    System.out.println(value);  
 }  
 }  

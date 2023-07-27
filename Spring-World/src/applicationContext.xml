@@ -11,7 +11,7 @@
 </bean>  
 
 <bean id="secondbean" class="com.pallas.Second">  
-<property name="name" value="Malacka"></property>  
+<property name="value" value="2"></property>  
 </bean>  
   
 </beans> 
