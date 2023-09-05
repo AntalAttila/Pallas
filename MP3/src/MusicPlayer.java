@@ -126,12 +126,12 @@ public class MusicPlayer implements ActionListener {
       @Override
       public void run() {
           try {
-              //code for play button
+              //Lejátszás gomb
               fileInputStream=new FileInputStream(myFile);
               bufferedInputStream=new BufferedInputStream(fileInputStream);
               player=new Player(bufferedInputStream);
               totalLength=fileInputStream.available();
-              player.play();//starting music
+              player.play();//A zene lejátszás indulhat
           } catch (FileNotFoundException e) {
               e.printStackTrace();
           } catch (JavaLayerException e) {
@@ -146,11 +146,11 @@ public class MusicPlayer implements ActionListener {
         @Override
         public void run() {
             try {
-                //code for resume button
+                //Lejátszás folytatása
                 fileInputStream=new FileInputStream(myFile);
                 bufferedInputStream=new BufferedInputStream(fileInputStream);
                 player=new Player(bufferedInputStream);
-                fileInputStream.skip(totalLength-pause);
+                fileInputStream.skip(totalLength-pause); //Előző pozíciótól folytatás
                 player.play();
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
