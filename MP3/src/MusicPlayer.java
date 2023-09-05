@@ -8,7 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
 
-//implementing ActionListener interface
+//ActionListener interface implementálása szükséges
 public class MusicPlayer implements ActionListener {
     JFrame frame;
     JLabel songNameLabel=new JLabel();
@@ -67,7 +67,7 @@ public class MusicPlayer implements ActionListener {
 
     }
     public void addActionEvents(){
-        //registering action listener to buttons
+        //action listener gombokhoz hozzárendelése 
         zeneValasztoGomb.addActionListener(this);
         playGomb.addActionListener(this);
         pauseGomb.addActionListener(this);
@@ -75,10 +75,10 @@ public class MusicPlayer implements ActionListener {
         stopGomb.addActionListener(this);
     }
 
-    @Override
+    @Override //A mintasablon kitöltése "konkrétumokkal"
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==zeneValasztoGomb){
-            //code for selecting our mp3 file from dialog window
+            //Dialógus ablak file-választáshoz
             fileValaszto=new JFileChooser();
             fileValaszto.setCurrentDirectory(new File("D:\\Zene\\"));
             fileValaszto.setDialogTitle("Select MP3");
@@ -91,12 +91,12 @@ public class MusicPlayer implements ActionListener {
             }
         }
         if(e.getSource()==playGomb){
-            //starting play thread
+            //Lejátszás kezdete
           playThread.start();
           songNameLabel.setText("     Zene: "+filename);
         }
         if(e.getSource()==pauseGomb){
-            //code for pause button
+            //Pillanat stop üzemmód
                  if(player!=null){
                      try {
                          pause=fileInputStream.available();
@@ -108,11 +108,11 @@ public class MusicPlayer implements ActionListener {
         }
 
         if(e.getSource()==resumeGomb){
-            //starting resume thread
+            //Lejátszás folytatása pillanat stop módból
            resumeThread.start();
         }
         if(e.getSource()==stopGomb){
-            //code for stop button
+            //Stop gomb
             if(player!=null){
                 player.close();
                 songNameLabel.setText("");
